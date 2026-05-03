@@ -1,9 +1,15 @@
 package org.example;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
+        Box<String> box = new Box<>();
 
+        System.out.println(box.isEmpty());
+
+        box.put("Hello");
+        System.out.println(box.get());
+        System.out.println(box.isEmpty());
+
+        box.clear();
+        System.out.println(box.isEmpty());
     }
 }
