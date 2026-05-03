@@ -1,5 +1,5 @@
-import org.example.Box;
-import org.junit.Test;
+package org.example;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
