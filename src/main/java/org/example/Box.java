@@ -1,21 +1,28 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+
 public class Box<T> {
-    private T item;
+    private final List<T> items = new ArrayList<>();
 
     public void put(T item) {
-        this.item = item;
+        items.add(item);
     }
 
     public T get() {
-        return item;
+        if (items.isEmpty()) {
+            throw new NoSuchElementException("Box is empty");
+        }
+        return items.remove(0);
     }
 
     public boolean isEmpty() {
-        return item == null;
+        return items.isEmpty();
     }
 
     public void clear() {
-        item = null;
+        items.clear();
     }
 }

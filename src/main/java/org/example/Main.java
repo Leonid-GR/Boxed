@@ -1,15 +1,15 @@
 package org.example;
+
 public class Main {
     public static void main(String[] args) {
         Box<String> box = new Box<>();
 
-        System.out.println(box.isEmpty());
+        box.put("A");
+        box.put("B");
 
-        box.put("Hello");
         System.out.println(box.get());
-        System.out.println(box.isEmpty());
+        System.out.println(box.get());
 
-        box.clear();
         System.out.println(box.isEmpty());
     }
 }
